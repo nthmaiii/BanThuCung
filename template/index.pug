@@ -1,0 +1,225 @@
+extends ../layouts/default.pug
+include ../mixin/product-item.pug
+include ../mixin/blog-item.pug
+include ../mixin/box-head.pug
+
+block title 
+    title Trang Chủ
+block main
+    //- section-1
+    section(class="section-1" )
+        .container
+            .section-1__wrap
+                img(src="./assets/images/section1-bg4.svg" alt="" class="section-1__bg4" style="display:none;")
+                div(class="section-1__content" )
+                    img(src="./assets/images/section1-bg1.svg" alt="" class="section-1__bg1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150")
+                    h1.section-1__title
+                        div(class="section-1__title-main" data-aos="fade-up" data-aos-duration="800") Thêm Một Bạn
+                        div(class="section-1__title-sub"  data-aos="fade-up" data-aos-duration="500" data-aos-delay="150") Thêm Ngàn Niền Vui!
+                    p(class="section-1__desc" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300") Có một con thú cưng đồng nghĩa với việc bạn có thêm niềm vui mới. Chúng tôi có hơn 200 con thú cưng khác nhau có thể đáp ứng nhu cầu của bạn!
+                    div(class="section-1__buttons" data-aos="fade-up" data-aos-duration="500" data-aos-delay="450")
+                        a(href="#!" class="button-outline") Giới Thiệu <i class="fa-regular fa-circle-play"></i>
+                        a(href="#!" class="button") Khám Phá Ngay
+                    img(src="./assets/images/section1-bg2.svg" alt="" class="section-1__bg2" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600")
+                .section-1__image
+                    img(src="./assets/images/section1-bg3.svg" alt="" class="section-1__bg3" data-aos="fade-up" data-aos-duration="500" )
+                    img(src="./assets/images/header-main.png" alt="Thêm một bạn thêm ngàn niềm vui" class="section-1__image-main" data-aos="fade-up" data-aos-duration="500" data-aos-delay="150")
+    //- End section-1
+    -
+        var pets = [
+        {
+            image: 'assets/images/section2-item1.jpg',
+            title: 'MO231 - Pomeranian Trắng',
+            gender: 'Đực',
+            age: '02 tháng',
+            price: '6.900.000 VND',
+            link: "product-detail.html"
+        },
+        {
+            image: 'assets/images/section2-item2.jpg',
+            title: 'MO502 - Poodle Tiny Vàng',
+            gender: 'Cái',
+            age: '02 tháng',
+            price: '3.900.000 VND',
+            link: "product-detail.html"
+        },
+        {
+            image: 'assets/images/section2-item3.jpg',
+            title: 'MO102 - Poodle Tiny Sepia',
+            gender: 'Đực',
+            age: '02 tháng',
+            price: '4.000.000 VND',
+            link: "product-detail.html"
+        },
+        {
+            image: 'assets/images/section2-item4.jpg',
+            title: 'MO512 - Alaskan Malamute',
+            gender: 'Đực',
+            age: '03 tháng',
+            price: '8.900.000 VND',
+            link: "product-detail.html"
+        },
+        {
+            image: 'assets/images/section2-item5.jpg',
+            title: 'MO231 - Pembroke Corgi',
+            gender: 'Đực',
+            age: '02 tháng',
+            price: '7.900.000 VND',
+            link: "product-detail.html"
+        },
+        {
+            image: 'assets/images/section2-item6.jpg',
+            title: 'MO502 - Pembroke Corgi',
+            gender: 'Cái',
+            age: '02 tháng',
+            price: '9.000.000 VND',
+            link: "product-detail.html"
+        },
+        {
+            image: 'assets/images/section2-item7.jpg',
+            title: 'MO231 - Pomeranian Trắng',
+            gender: 'Cái',
+            age: '02 tháng',
+            price: '6.500.000 VND',
+            link: "product-detail.html"
+        },
+        {
+            image: 'assets/images/section2-item8.jpg',
+            title: 'MO512 - Poodle Tiny',
+            gender: 'Đực',
+            age: '02 tháng',
+            price: '5.000.000 VND',
+            link: "product-detail.html"
+        }
+        ];
+    //- section-2
+    -
+        var blogs = [
+            {
+                link: '#!',
+                image: './assets/images/section4-item1.jpg',
+                tag: 'Kiến thức thú cưng',
+                title: 'Pomeranian là gì? Cách nhận biết chó Pomeranian',
+                desc: 'Pomeranian hay còn gọi là chó Pomeranian (chó Pom) luôn nằm trong top những thú cưng dễ thương nhất. Không chỉ vậy, giống chó xiếc nhỏ nhắn, đáng yêu, thông minh, thân thiện và khéo léo.'
+            },
+            {
+                link: '#!',
+                image: './assets/images/section4-item2.jpg',
+                tag: 'Kiến thức thú cưng',
+                title: 'Chế độ ăn cho chó bạn cần biết',
+                desc: 'Việc chia khẩu phần ăn cho chó thoạt nghe có vẻ đơn giản nhưng có một số quy tắc bạn nên biết để chó cưng dễ dàng hấp thụ các chất dinh dưỡng trong khẩu phần ăn. Dành cho những người mới bắt đầu nuôi chó, đặc biệt là chó con mới sinh có sức đề kháng tương đối yếu..'
+            },
+            {
+                link: '#!',
+                image: './assets/images/section4-item3.jpg',
+                tag: 'Kiến thức thú cưng',
+                title: 'Tại sao chó cắn phá đồ đạc và cách phòng ngừa hiệu quả',
+                desc: 'Chó cắn là hiện tượng phổ biến trong quá trình phát triển. Tuy nhiên, không ai muốn thấy đồ đạc, vật dụng quan trọng của mình bị chó cắn.'
+            },
+            {
+                link: '#!',
+                image: './assets/images/section4-item1.jpg',
+                tag: 'Kiến thức thú cưng',
+                title: 'Pomeranian là gì? Cách nhận biết chó Pomeranian',
+                desc: 'Pomeranian hay còn gọi là chó Pomeranian (chó Pom) luôn nằm trong top những thú cưng dễ thương nhất. Không chỉ vậy, giống chó xiếc nhỏ nhắn, đáng yêu, thông minh, thân thiện và khéo léo.'
+            },
+            {
+                link: '#!',
+                image: './assets/images/section4-item2.jpg',
+                tag: 'Kiến thức thú cưng',
+                title: 'Chế độ ăn cho chó bạn cần biết',
+                desc: 'Việc chia khẩu phần ăn cho chó thoạt nghe có vẻ đơn giản nhưng có một số quy tắc bạn nên biết để chó cưng dễ dàng hấp thụ các chất dinh dưỡng trong khẩu phần ăn. Dành cho những người mới bắt đầu nuôi chó, đặc biệt là chó con mới sinh có sức đề kháng tương đối yếu..'
+            },
+            {
+                link: '#!',
+                image: './assets/images/section4-item3.jpg',
+                tag: 'Kiến thức thú cưng',
+                title: 'Tại sao chó cắn phá đồ đạc và cách phòng ngừa hiệu quả',
+                desc: 'Chó cắn là hiện tượng phổ biến trong quá trình phát triển. Tuy nhiên, không ai muốn thấy đồ đạc, vật dụng quan trọng của mình bị chó cắn.'
+            },
+            {
+                link: '#!',
+                image: './assets/images/section4-item1.jpg',
+                tag: 'Kiến thức thú cưng',
+                title: 'Pomeranian là gì? Cách nhận biết chó Pomeranian',
+                desc: 'Pomeranian hay còn gọi là chó Pomeranian (chó Pom) luôn nằm trong top những thú cưng dễ thương nhất. Không chỉ vậy, giống chó xiếc nhỏ nhắn, đáng yêu, thông minh, thân thiện và khéo léo.'
+            },
+            {
+                link: '#!',
+                image: './assets/images/section4-item2.jpg',
+                tag: 'Kiến thức thú cưng',
+                title: 'Chế độ ăn cho chó bạn cần biết',
+                desc: 'Việc chia khẩu phần ăn cho chó thoạt nghe có vẻ đơn giản nhưng có một số quy tắc bạn nên biết để chó cưng dễ dàng hấp thụ các chất dinh dưỡng trong khẩu phần ăn. Dành cho những người mới bắt đầu nuôi chó, đặc biệt là chó con mới sinh có sức đề kháng tương đối yếu..'
+            },
+            {
+                link: '#!',
+                image: './assets/images/section4-item3.jpg',
+                tag: 'Kiến thức thú cưng',
+                title: 'Tại sao chó cắn phá đồ đạc và cách phòng ngừa hiệu quả',
+                desc: 'Chó cắn là hiện tượng phổ biến trong quá trình phát triển. Tuy nhiên, không ai muốn thấy đồ đạc, vật dụng quan trọng của mình bị chó cắn.'
+            }
+        ];
+    -
+        var boxHeads = [
+            {
+                subtitle: 'Có gì mới?',
+                title: 'một số vật nuôi của chúng tôi',
+                link: 'product-list.html',
+                btn: 'Xem thêm'
+            },
+            {
+                subtitle: 'Có thể bạn đã biết?',
+                title: 'Kiến thức thú cưng hữu ích',
+                link: '#!',
+                btn: 'Xem thêm'
+            }
+        ];
+    section.section-2
+        .container
+            +box-head(boxHeads[0])
+            .section-2__wrap
+                each pet in pets 
+                    +product-item(pet)
+            .section-2__button-mobile
+                a(href=boxHeads[0].link class="button-outline") Xem thêm <i class="fa-solid fa-chevron-right"></i>
+    //- end section-2
+
+    //- section-3
+    include ../partials/section-3.pug
+    //- End section-3
+    
+    //- section-4
+    section.section-4
+        .container
+            +box-head(boxHeads[1])
+            //- .section-4__wrap 
+            //-     each blog in blogs 
+            //-         +blog-item(blog)
+            div(class="swiper swipper-blog")
+                div(class="swiper-wrapper")
+                    each blog in blogs 
+                        div(class="swiper-slide") 
+                            +blog-item(blog)
+                div(class="swiper-pagination")
+            .section-4__button-mobile
+                a(href="#!" class="button-outline") Xem thêm <i class="fa-solid fa-chevron-right"></i>
+    //- End section-4
+
+    //- menu
+    div(class="menuShow menuShow__hidden")
+        div.menuShow__box-menu 
+            .menuShow-top 
+                div.desc Menu
+                i(class="fa-solid fa-xmark")
+            ul
+                li
+                    a(href="#!") Trang Chủ
+                li
+                    a(href="#!") Danh Mục
+                li
+                    a(href="#!") Giới Thiệu
+                li
+                    a(href="#!") Liên Hệ
+        .menuShow__box-overlay
+
+    //- End menu

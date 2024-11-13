@@ -1,0 +1,9 @@
+mixin blog-item(blog )
+    .blog-item
+        a(href=blog.link)
+            .blog-item__image
+                img(src=blog.image alt=blog.title)
+            .blog-item__content
+                .blog-item__tag #{blog.tag}
+                h3.blog-item__title #{blog.title}
+                p.blog-item__desc #{blog.desc}

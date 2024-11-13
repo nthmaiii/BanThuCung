@@ -1,0 +1,7 @@
+mixin box-head(boxHead)
+    .box-head
+        .box-head__left
+            .box-head__sub-title #{boxHead.subtitle}
+            .box-head__title #{boxHead.title}
+        .box-head__right
+            a(href=boxHead.link class="button-outline") #{boxHead.btn} <i class="fa-solid fa-chevron-right"></i> 

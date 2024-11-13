@@ -1,0 +1,104 @@
+
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        block title
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        link(href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet")
+        link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css" integrity="sha512-za6IYQz7tR0pzniM/EAkgjV1gf1kWMlVJHBHavKIvsNoUMKWU99ZHzvL6lIobjiE2yKDAKMDSSmcMAxoiWgoWA==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        link(rel="stylesheet" href="./assets/css/styles.css")
+    body 
+        //- header
+        header.header
+            .container
+                .header__wrap
+                    //- logo 
+                    .header__logo
+                        a(href="index.html")
+                            img(src="./assets/images/logo.svg" alt="Monito")
+                    //- menu
+                    .header__menu-mobile 
+                        i(class="fa-solid fa-bars")
+                    .header__menu
+                        ul
+                            li
+                                a(href="#!") Trang Chủ
+                            li
+                                a(href="#!") Danh Mục
+                            li
+                                a(href="#!") Giới Thiệu
+                            li
+                                a(href="#!") Liên Hệ
+                    //- search 
+                    .header__search-mobile
+                        i(class="fa-solid fa-magnifying-glass")
+                    form(action="#!" class="header__search")
+                        input(type="text" name="keyword" placeholder="Nhập từ khoá...")
+                        button 
+                            i(class="fa-solid fa-magnifying-glass")
+                    //- call to action
+                    a(href="#!" class="button") Tham gia cộng đồng
+        //- End header
+        block main
+        //- footer
+        footer.footer
+            .container
+                .footer__top
+                    .footer__content Đăng ký ngay để không bỏ lỡ các chương trình của chúng tôi
+                    .footer__form
+                        form(action="")
+                            input(type="email" name="email" placeholder="Nhập email của bạn...")
+                            button Đăng ký ngay
+                .footer__mid
+                    nav.footer__links
+                        ul
+                            li <a href="#!">Trang Chủ</a>
+                            li <a href="#!">Danh Mục</a>
+                            li <a href="#!">Giới Thiệu</a>
+                            li <a href="#!">Liên Hệ</a>
+                    nav.footer__socials
+                        ul
+                            li <a href="#!"><i class="fa-brands fa-facebook"></i></a>
+                            li <a href="#!"><i class="fa-brands fa-twitter"></i></a>
+                            li <a href="#!"><i class="fa-brands fa-instagram"></i></a>
+                            li <a href="#!"><i class="fa-brands fa-youtube"></i></a>
+                .footer__bottom
+                    .footer__copyright © 2023 28Tech. All rights reserved.
+                    .footer__logo
+                        img(src="./assets/images/logo.svg" alt="monito")
+                    nav.footer__benefit-user
+                        ul
+                            li <a href="#!">Điều khoản dịch vụ</a>
+                            li <a href="#!">Chính sách bảo mật</a>
+        //- End footer
+        //- menu
+        div(class="menuShow menuShow__hidden")
+            div.menuShow__box-menu 
+                .menuShow-top 
+                    div.desc Menu
+                    i(class="fa-solid fa-xmark")
+                ul
+                    li
+                        a(href="#!") Trang Chủ
+                    li
+                        a(href="#!") Danh Mục
+                    li
+                        a(href="#!") Giới Thiệu
+                    li
+                        a(href="#!") Liên Hệ
+            .menuShow__box-overlay
+
+        //- End menu
+    
+        //- Nhúng thư viện viewer js
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js" integrity="sha512-EC3CQ+2OkM+ZKsM1dbFAB6OGEPKRxi6EDRnZW9ys8LghQRAq6cXPUgXCCujmDrXdodGXX9bqaaCRtwj4h4wgSQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        //- Nhúng thư viện AOS
+        script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
+        //- Nhúng thư viện swipper 
+        script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+        
+        //- Nhúng link js cho dự án này
+        script(src="./script.js")

@@ -1,0 +1,139 @@
+extends ../layouts/default.pug
+include ../mixin/product-item.pug
+include ../mixin/blog-item.pug
+include ../mixin/box-head.pug
+block title 
+    title Chi tiết sản phẩm
+block main 
+    //- section-6
+    .section-6 
+        .container 
+            .section-6__wrap 
+                .section-6__images 
+                    div(class="section-6__images-main " ) 
+                        img(id="image" src="./assets/images/pro-1.jpg" alt="Shiba Inu Màu Nâu Đỏ")
+                    div(class="swiper swipper-thumb")
+                        div(class="swiper-wrapper")
+                            div(class="swiper-slide") <img src="./assets/images/pro-2.jpg" >
+                            div(class="swiper-slide") <img src="./assets/images/pro-3.jpg" >
+                            div(class="swiper-slide") <img src="./assets/images/pro-4.jpg" >
+                            div(class="swiper-slide") <img src="./assets/images/pro-5.jpg" >
+                            div(class="swiper-slide") <img src="./assets/images/pro-6.jpg" >
+                            div(class="swiper-slide") <img src="./assets/images/pro-2.jpg" >
+                            div(class="swiper-slide") <img src="./assets/images/pro-3.jpg" >
+                            div(class="swiper-slide") <img src="./assets/images/pro-4.jpg" >
+                            div(class="swiper-slide") <img src="./assets/images/pro-5.jpg" >
+                            div(class="swiper-slide") <img src="./assets/images/pro-6.jpg" >
+                        div(class="swiper-pagination") 
+                .section-6__content
+                    //- breadcrumb
+                    .breadcrumb 
+                        nav.breadcrumb__wrap 
+                            ul 
+                                li 
+                                    a(href="#!") Trang Chủ
+                                li 
+                                    a(href="#!") Chó
+                                li 
+                                    a(href="#!") Chó nhỏ
+                                li 
+                                    a(href="#!") Shiba Inu Màu Nâu Đỏ
+                    //- End breadcrumb
+                    h1.section-6__title Shiba Inu Màu Nâu Đỏ
+                    .section-6__price 12.000.000 VND
+                    .section-6__buttons 
+                        a(href="#!" class="button") Liên hệ
+                        a(href="#!" class="button-outline")
+                            img(src="./assets/images/comment.png")
+                            | Chat với Monito
+                    .section-6__table 
+                        table 
+                            tbody 
+                                tr 
+                                    td SKU
+                                    td #1000078
+                                tr 
+                                    td Giống
+                                    td Cái
+                                tr 
+                                    td Tuổi
+                                    td 2 tháng
+                                tr 
+                                    td Kích thước
+                                    td Nhỏ
+                                tr 
+                                    td Màu sắc
+                                    td Nâu đỏ
+                                tr 
+                                    td Mô tả ngắn
+                                    td Giống thuần chủng Shih Tzu. Cấu trúc cơ thể tốt. Với chứng chỉ MKA và Microchip. Cha từ dòng dõi vô địch.
+                    .box-share 
+                        .box-share__lable 
+                            img(src="./assets/images/share.svg") 
+                            | Chia sẻ:
+                        .box-share__list 
+                            a(href="#!" target="_blank") <i class="fa-brands fa-facebook"></i> 
+                            a(href="#!" target="_blank") <i class="fa-brands fa-twitter"></i>
+                            a(href="#!" target="_blank") <i class="fa-brands fa-instagram"></i>
+                            a(href="#!" target="_blank") <i class="fa-brands fa-youtube"></i>
+    
+    -
+        var pets = [
+        {
+            image: 'assets/images/section2-item1.jpg',
+            title: 'MO231 - Pomeranian Trắng',
+            gender: 'Đực',
+            age: '02 tháng',
+            price: '6.900.000 VND',
+            link: './product-detail.html'
+        },
+        {
+            image: 'assets/images/section2-item2.jpg',
+            title: 'MO502 - Poodle Tiny Vàng',
+            gender: 'Cái',
+            age: '02 tháng',
+            price: '3.900.000 VND',
+            link: './product-detail.html'
+        },
+        {
+            image: 'assets/images/section2-item3.jpg',
+            title: 'MO102 - Poodle Tiny Sepia',
+            gender: 'Đực',
+            age: '02 tháng',
+            price: '4.000.000 VND',
+            link: './product-detail.html'
+        },
+        {
+            image: 'assets/images/section2-item4.jpg',
+            title: 'MO512 - Alaskan Malamute',
+            gender: 'Đực',
+            age: '03 tháng',
+            price: '8.900.000 VND',
+            link: './product-detail.html'
+        }
+        ];
+    //- section-2
+    -
+        var boxHeads = [
+            {
+                subtitle: 'Có gì mới?',
+                title: 'một số vật nuôi của chúng tôi',
+                link: './product-list.html',
+                btn: 'Xem thêm'
+            },
+            {
+                subtitle: 'Có thể bạn đã biết?',
+                title: 'Kiến thức thú cưng hữu ích',
+                link: './product-list.pug',
+                btn: 'Xem thêm'
+            }
+        ];
+    section.section-2
+        .container
+            +box-head(boxHeads[0])
+            .section-2__wrap
+                each pet in pets 
+                    +product-item(pet)
+            .section-2__button-mobile
+                a(href="#!" class="button-outline") Xem thêm <i class="fa-solid fa-chevron-right"></i>
+    //- end section-2
